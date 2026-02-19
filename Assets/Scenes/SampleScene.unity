@@ -456,13 +456,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562956631}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0.9304176, z: -0.36650118, w: 0}
   m_LocalPosition: {x: 0.0311, y: 0.3467, z: 0.0067}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1670621460}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 43, y: 180, z: 0}
 --- !u!135 &562956633
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 502dd00fbdb534233b0b128aadf28b07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -568,13 +568,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796498079}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: -0.130442, y: 0.92122453, z: -0.3632282, w: -0.04894464}
   m_LocalPosition: {x: -0.0325, y: 0.3467, z: 0.0066}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1670621460}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 43, y: 179.641, z: -16.26}
 --- !u!135 &796498081
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -621,7 +621,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 502dd00fbdb534233b0b128aadf28b07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -735,12 +735,16 @@ MonoBehaviour:
   Eye_L: {fileID: 562956632}
   Eye_R: {fileID: 796498080}
   eyeTarget: {fileID: 1658736460}
-  faceReceiver: {fileID: 43202610}
-  maxRotation: 30
-  smoothSpeed: 5
   maxHorizontal: 18
   maxVertical: 12
-  inputSmooth: 5
+  smoothSpeed: 5
+  leftEyeOffsetEuler: {x: 0, y: 0, z: 0}
+  rightEyeOffsetEuler: {x: 0, y: 0, z: 0}
+  centerOffsetDegrees: {x: 0, y: 0}
+  invertYawOnRightEye: 1
+  returnToCenterWhenNoTarget: 0
+  returnSpeedMultiplier: 0.6
+  faceReceiver: {fileID: 0}
 --- !u!4 &1000311665
 Transform:
   m_ObjectHideFlags: 0
@@ -774,7 +778,7 @@ MonoBehaviour:
   rangeX: 1.2
   rangeY: 0.8
   depth: 2
-  smooth: 4
+  smooth: 2
 --- !u!1 &1658736459
 GameObject:
   m_ObjectHideFlags: 0

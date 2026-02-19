@@ -7,16 +7,16 @@ public class EyeTargetController : MonoBehaviour
     public FaceReceiver receiver;
 
     public float rangeX = 1.2f;
-    public float rangeY = 0.8f;
+    public float rangeY = 1f;
     public float depth = 2f;
-    public float smooth = 4f;
+    public float smooth = 2f;
 
     void Update()
     {
         if (receiver == null) return;
 
         float x = (receiver.faceX - 0.5f) * rangeX;
-        float y = (0.5f - receiver.faceY) * rangeY;
+        float y = -(0.5f - receiver.faceY) * rangeY;
 
         Vector3 targetPos = new Vector3(x, y, depth);
 

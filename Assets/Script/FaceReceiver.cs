@@ -11,6 +11,7 @@ public class FaceReceiver : MonoBehaviour
     Thread receiveThread;
     public float faceX, faceY; // valores normalizados
     bool running = true;
+    
 
     void Start()
     {
